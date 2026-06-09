@@ -8,4 +8,9 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     server: { entry: "server" },
   },
+  // Pin Nitro to the Vercel preset so `npm run build` produces the correct
+  // output layout for Vercel deployments (/.vercel/output).
+  nitro: {
+    preset: "vercel",
+  },
 });
